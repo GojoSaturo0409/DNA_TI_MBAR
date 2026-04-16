@@ -1,0 +1,22 @@
+&cntrl
+  imin=0,       ! Molecular dynamics
+  ntx=1,        ! Read coordinates with no velocities
+  irest=0,      ! New simulation, no restart
+  nstlim=1200000, ! Number of MD steps (0.002 ps * 300,000 = 600 ps = 0.6 ns)
+  dt=0.0005,     ! 2 fs timestep
+  ntb=2,        ! Constant pressure periodic boundaries
+  pres0=1.0,    ! Target pressure (atm)
+  ntp=1,        ! Isotropic pressure coupling
+  taup=2.0,     ! Pressure relaxation time (ps)
+  tempi=10.0,   ! Initial temperature (K)
+  temp0=300.0,  ! Target temperature (K)
+  ntt=3,        ! Langevin thermostat
+  gamma_ln=2.0, ! Collision frequency
+  ntc=2,        ! Constrain bonds involving H
+  ntf=2,        ! No force evaluation on constrained bonds
+  cut=10.0,     ! Non-bonded cutoff (Å)
+  ntpr=1000,    ! Print energies every 1000 steps
+  ntwx=1000,    ! Write coordinates every 1000 steps
+  ntwr=5000     ! Write restart file every 5000 steps
+/
+

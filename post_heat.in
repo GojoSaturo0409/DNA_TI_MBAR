@@ -1,0 +1,53 @@
+&cntrl
+  imin=0,
+  ntx=5,
+  irest=1,
+
+  nstlim=1200000,   ! 2.4 ns total
+  dt=0.002,
+
+  ntb=2,
+  pres0=1.0,
+  ntp=1,
+  taup=2.0,
+
+  temp0=300.0,
+  ntt=3,
+  gamma_ln=2.0,
+
+  ntc=2,
+  ntf=2,
+
+  cut=10.0,
+
+  ntpr=1000,
+  ntwx=20000,      ! ~40 ps intervals (more reasonable than before)
+  ntwr=5000,
+
+  ! --- TI core ---
+  icfe=1,
+  clambda=0.5,
+  ifsc=1,
+
+  ! --- Softcore masks ---
+  timask1=':392-406',
+  scmask1=':392-406',
+  timask2='',
+  scmask2='',
+
+  ! --- GTI ---
+  gti_lam_sch=1,
+  gti_ele_sc=1,
+  gti_vdw_sc=1,
+  gti_cut_sc=2,
+  gti_add_sc=1,
+
+  ! --- dvdl ---
+  logdvdl=1,
+
+  ! --- MBAR ---
+  ifmbar=1,
+  mbar_states=12,
+  mbar_lambda=0.00922,0.04794,0.11505,0.20634,0.31608,0.43738,
+              0.56262,0.68392,0.79366,0.88495,0.95206,0.99078,
+/

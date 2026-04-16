@@ -1,0 +1,56 @@
+&cntrl
+  imin=0,
+  ntx=5,
+  irest=1,
+
+  nstlim=10000000,
+  dt=0.001,
+
+  ntb=2,
+  pres0=1.0,
+  ntp=1,
+  taup=2.0,
+
+  tempi=300.0,
+  temp0=300.0,
+  ntt=3,
+  gamma_ln=2.0,
+
+  ntc=1,
+  ntf=1,
+
+  cut=10.0,
+
+  ntpr=1000,
+  ntwx=20000,
+  ntwr=5000,
+
+  ! --- TI core ---
+  icfe=1,
+  clambda=0.00922,
+  ifsc=1,
+
+  ! --- Softcore masks ---
+  timask1=':392-406',
+  scmask1=':392-406',
+  timask2='',
+  scmask2='',
+
+  ! --- Lambda scheduling (pmemd.cuda GTI) ---
+  gti_lam_sch=1,
+  gti_ele_sc=1,
+  gti_vdw_sc=1,
+  gti_cut_sc=2,
+
+  ! --- Softcore corrections ---
+  gti_add_sc=1,
+
+  ! --- dvdl logging ---
+  logdvdl=1,
+
+  ! --- MBAR ---
+  ifmbar=1,
+  mbar_states=12,
+  mbar_lambda=0.00922,0.04794,0.11505,0.20634,0.31608,0.43738,
+              0.56262,0.68392,0.79366,0.88495,0.95206,0.99078,
+/

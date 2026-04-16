@@ -1,0 +1,30 @@
+&cntrl
+  imin=1,
+  maxcyc=50000,
+  ncyc=30000,
+
+  ntb=1,
+  cut=8.0,
+
+  ntpr=500,
+  ntwx=0,
+  ntwr=10000,
+
+  ntr=0,
+
+  ! --- TI settings for lambda = 0.5 ---
+  icfe=1,
+  clambda=0.5,
+  ifsc=1,
+
+  timask1=':392-406',
+  scmask1=':392-406',
+  timask2='',
+  scmask2='',
+
+  ! Optional but recommended for consistency with MD
+  gti_lam_sch=1,
+  gti_ele_sc=1,
+  gti_vdw_sc=1,
+  gti_cut_sc=2,
+/
