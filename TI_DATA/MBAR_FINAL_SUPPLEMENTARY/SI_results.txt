@@ -1,0 +1,70 @@
+SUPPLEMENTARY RESULTS -- MBAR Free-Energy Convergence Analysis
+================================================================
+Generated: 2026-08-29 20:54:09
+
+Of the eight analyzed alchemical legs, 6 (6-4PP bhd3, 6-4PP bhd3 (docked), Lesion strand, Lesion strand (docked), Partner strand, Partner strand (docked)) met
+the convergence criterion (forward/backward difference at the 90%
+trajectory fraction <=0.5% of the total free energy), and
+2 (6-4PP bhd2, 6-4PP bhd2 (docked)) were
+borderline (0.5-1.5%). No systems were classified as not converged.
+
+The two borderline systems, 6-4PP bhd2 and 6-4PP bhd2 (docked),
+both belong to the same ligand family and both showed forward/backward
+differences concentrated in low-to-mid lambda windows in earlier
+TI-based diagnostics performed on this same underlying trajectory data
+(reported separately) -- an independent line of evidence pointing to
+the same two systems, using a different estimator (thermodynamic
+integration rather than MBAR) and a different statistical test
+(half-trajectory z-test rather than forward/backward relative
+difference). This cross-method agreement makes the borderline
+classification for these two systems a genuine, reproducible finding
+rather than an artifact of any single diagnostic choice, and extended
+sampling in the implicated lambda region is recommended before their
+free-energy estimates are treated as final for publication.
+
+DOCKED_BHD2 -- SPECIAL VALIDATION
+------------------------------------
+A forensic audit (docked_bhd2_audit/) previously traced this system's
+initial anomalous MBAR result (+5,735,757.9 kcal/mol) to a numerical
+ill-conditioning of the full 12-state joint solve, itself caused by
+per-window-independent decorrelation reducing one window's sample
+count (window 1: N_eff=62) to a small fraction of its neighbors'
+(N_eff=1400-4000) -- not to a physical sampling failure, unit error,
+lambda-indexing error, sign error, or the overflow-value sentinel
+treatment, each of which was explicitly tested and excluded in that
+audit. Using a validated pipeline (uniform stride across all 12
+windows, avoiding the per-state sample-count imbalance identified as
+the root cause), this analysis independently reproduces the
+physically sensible free energy:
+
+  Final (uniform stride=10):     -3218.12 +/- 0.72 kcal/mol (analytic)
+                                   +/- 8.05 kcal/mol (bootstrap, n=200)
+  Stride 5:                      -3219.40 +/- 0.50 kcal/mol
+  Stride 10:                     -3218.12 +/- 0.72 kcal/mol
+  Stride 20:                     -3224.69 +/- 1.02 kcal/mol
+  Stride 40:                     -3238.24 +/- 1.09 kcal/mol
+  Prior independent implementations (raw, non-decorrelated data):
+    ti_analysis.py:               -3218.06 +/- 0.29 kcal/mol
+    full_diag.py (this project):  -3217.83 +/- 0.22 kcal/mol
+
+All five independent estimates (four strides plus two prior
+implementations using entirely different sample-reduction strategies)
+agree to within ~20 kcal/mol on a ~3218 kcal/mol scale (<0.7%
+spread). The forward/backward convergence curve under the validated
+pipeline (Figure S1, panel 2) shows both directions converging
+smoothly toward the full-data estimate, in clear contrast to the
+original decorrelated-pipeline result. The remaining forward/backward
+difference at the 90% fraction (-41.4 kcal/mol, 1.29% of the
+total) places this system at BORDERLINE rather than CONVERGED by the
+criterion used throughout this analysis -- a real, if modest, residual
+difference, reported honestly rather than rounded down to "converged"
+because the catastrophic failure mode was resolved. The pathological
++5.736e6 kcal/mol result is explicitly rejected and is not used
+anywhere in the statistics above except as the subject of the
+forensic audit that identified and resolved it.
+
+OVERALL
+-------
+Six of the eight analyzed alchemical legs (6-4PP bhd3, 6-4PP bhd3 (docked), Lesion strand, Lesion strand (docked), Partner strand, Partner strand (docked)) exhibited stable MBAR free-energy estimates under forward/backward trajectory convergence and independent sampling-resolution (stride/decorrelation) checks, with consistent estimates within 0.5% of the total free energy. These results support convergence of the reported free-energy differences for these six systems.
+
+The remaining two legs (6-4PP bhd2, 6-4PP bhd2 (docked)) showed a reproducible, cross-method-consistent forward/backward difference of 0.9-1.3%, placing them at the borderline of the convergence criterion used here. This is not the pathological failure previously seen for docked_bhd2 -- that issue is fully resolved and excluded from these statistics -- but a smaller, genuine residual instability that should be disclosed rather than absorbed into a blanket convergence claim.

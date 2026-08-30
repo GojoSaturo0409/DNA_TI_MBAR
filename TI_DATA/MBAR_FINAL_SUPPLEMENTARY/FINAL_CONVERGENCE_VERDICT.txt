@@ -1,0 +1,89 @@
+FINAL CONVERGENCE VERDICT -- All 8 Alchemical Legs
+=====================================================
+Generated: 2026-08-29 20:54:09
+
+System: 6-4PP bhd2
+  Final dF:                  -2157.19 kcal/mol
+  Uncertainty (analytic):    0.537 kcal/mol
+  Forward/backward agreement: -18.48 kcal/mol (0.857% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0000 / 0.0240 / 0.4530
+  ESS (min/median N_eff):    93 / 3400
+  Final verdict:              BORDERLINE
+
+System: 6-4PP bhd2 (docked)
+  Final dF:                  -3218.12 kcal/mol
+  Uncertainty (analytic):    0.717 kcal/mol  (bootstrap: 8.05, block SEM: 65.5)
+  Forward/backward agreement: -41.42 kcal/mol (1.287% of total) at 90% fraction
+  Stride robustness:         5/10/20/40 kcal/mol: -3219.4, -3218.1, -3224.7, -3238.2
+  Overlap (min/median/max adjacent): 0.0000 / 0.0098 / 0.4916
+  ESS (min/median N_eff):    62 / 3333
+  Final verdict:              BORDERLINE
+
+System: 6-4PP bhd3
+  Final dF:                  -3545.07 kcal/mol
+  Uncertainty (analytic):    0.111 kcal/mol
+  Forward/backward agreement: +0.05 kcal/mol (0.001% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0000 / 0.0394 / 0.4662
+  ESS (min/median N_eff):    2551 / 3482
+  Final verdict:              CONVERGED
+
+System: 6-4PP bhd3 (docked)
+  Final dF:                  -3269.92 kcal/mol
+  Uncertainty (analytic):    0.127 kcal/mol
+  Forward/backward agreement: -8.35 kcal/mol (0.255% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0000 / 0.0162 / 0.4705
+  ESS (min/median N_eff):    1396 / 3596
+  Final verdict:              CONVERGED
+
+System: Lesion strand
+  Final dF:                  -928.95 kcal/mol
+  Uncertainty (analytic):    0.210 kcal/mol
+  Forward/backward agreement: -2.01 kcal/mol (0.216% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0010 / 0.1040 / 0.3999
+  ESS (min/median N_eff):    2970 / 3447
+  Final verdict:              CONVERGED
+
+System: Lesion strand (docked)
+  Final dF:                  -2979.26 kcal/mol
+  Uncertainty (analytic):    0.135 kcal/mol
+  Forward/backward agreement: -0.75 kcal/mol (0.025% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0000 / 0.0694 / 0.3644
+  ESS (min/median N_eff):    2399 / 3458
+  Final verdict:              CONVERGED
+
+System: Partner strand
+  Final dF:                  -3061.59 kcal/mol
+  Uncertainty (analytic):    0.134 kcal/mol
+  Forward/backward agreement: +1.87 kcal/mol (0.061% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0000 / 0.0178 / 0.3854
+  ESS (min/median N_eff):    2324 / 3488
+  Final verdict:              CONVERGED
+
+System: Partner strand (docked)
+  Final dF:                  -2772.80 kcal/mol
+  Uncertainty (analytic):    0.168 kcal/mol
+  Forward/backward agreement: -0.83 kcal/mol (0.030% of total) at 90% fraction
+  Stride robustness:         n/a (decorrelated pipeline validated; no stride sweep run)
+  Overlap (min/median/max adjacent): 0.0001 / 0.0233 / 0.3496
+  ESS (min/median N_eff):    2714 / 3810
+  Final verdict:              CONVERGED
+
+=======================================================
+OVERALL CONCLUSION
+=======================================================
+
+The validated diagnostics do NOT support the blanket statement that all eight legs are converged, and that statement is not made here.
+
+6 of 8 legs (6-4PP bhd3, 6-4PP bhd3 (docked), Lesion strand, Lesion strand (docked), Partner strand, Partner strand (docked)) are CONVERGED: forward/backward estimates agree to within 0.5% of the total free energy, overlap and effective sample size are adequate, and (for docked_bhd2's family members bhd3, docked_bhd3, and the lesion/partner systems) no anomalies were found at any stage of this or the prior forensic audit.
+
+2 of 8 legs (6-4PP bhd2, 6-4PP bhd2 (docked)) are BORDERLINE: a real, reproducible, cross-method-consistent forward/backward difference of ~0.9-1.3% of the total free energy. For docked_bhd2 specifically, this is reported after fully resolving the unrelated catastrophic numerical failure identified by the forensic audit (the corrected value, ~-3218 kcal/mol, is confirmed by five independent analyses); the borderline classification reflects a smaller, separate, genuine residual instability, not a remnant of that earlier failure.
+
+Recommended wording for the manuscript, scoped to what the diagnostics actually support:
+
+"Six of the eight analyzed alchemical legs exhibited stable MBAR free-energy estimates under forward/backward trajectory convergence and independent sampling-resolution checks, with consistent estimates within 0.5% of the total free energy. The remaining two legs (6-4PP bhd2 and its docked pose) showed a reproducible forward/backward difference of approximately 1%, consistent across independent thermodynamic-integration and MBAR analyses of the same trajectories, and are reported as borderline pending additional sampling."

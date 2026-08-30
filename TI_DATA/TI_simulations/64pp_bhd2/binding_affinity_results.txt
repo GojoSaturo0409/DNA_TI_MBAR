@@ -1,0 +1,51 @@
+=================================================================
+  AMBER MBAR FREE ENERGY ANALYSIS  –  RESULTS SUMMARY
+  Generated : 2026-04-27  18:57:24
+=================================================================
+
+SIMULATION SETTINGS
+  Simulation length  : 10 ns
+  Lambda windows     : 12
+  Lambda values      : [0.0092, 0.0479, 0.115, 0.2063, 0.3161, 0.4374, 0.5626, 0.6839, 0.7937, 0.885, 0.9521, 0.9908]
+  Equilibration skip : first 20% of frames (= 2.0 ns)
+
+FRAME COUNTS  (after equilibration removal)
+  w01  λ=0.0092:  10000 raw → 8000 frames used
+  w02  λ=0.0479:  10000 raw → 8000 frames used
+  w03  λ=0.1150:  10000 raw → 8000 frames used
+  w04  λ=0.2063:  10000 raw → 8000 frames used
+  w05  λ=0.3161:  10000 raw → 8000 frames used
+  w06  λ=0.4374:  10000 raw → 8000 frames used
+  w07  λ=0.5626:  10000 raw → 8000 frames used
+  w08  λ=0.6839:  10000 raw → 8000 frames used
+  w09  λ=0.7937:  10000 raw → 8000 frames used
+  w10  λ=0.8850:  10000 raw → 8000 frames used
+  w11  λ=0.9521:  10000 raw → 8000 frames used
+  w12  λ=0.9908:  10000 raw → 8000 frames used
+
+MBAR FREE ENERGY RESULT
+  ΔF (10 ns) = -2561.3178 ± 0.1916 kcal/mol
+
+CONVERGENCE INDICATORS
+  (Inspect the plots for definitive assessment)
+
+  Per-window dV/dλ stability (last 25% vs full mean):
+    w01 λ=0.0092:  full=+25.847,  tail=+26.103,  drift=1.0%  ✓
+    w02 λ=0.0479:  full=+597.996,  tail=+629.632,  drift=5.3%  ⚠ drift
+    w03 λ=0.1150:  full=+1149.721,  tail=+1226.844,  drift=6.7%  ⚠ drift
+    w04 λ=0.2063:  full=+597.421,  tail=+598.807,  drift=0.2%  ✓
+    w05 λ=0.3161:  full=+138.058,  tail=+136.608,  drift=1.1%  ✓
+    w06 λ=0.4374:  full=+136.467,  tail=+136.275,  drift=0.1%  ✓
+    w07 λ=0.5626:  full=+136.873,  tail=+138.338,  drift=1.1%  ✓
+    w08 λ=0.6839:  full=+134.983,  tail=+134.939,  drift=0.0%  ✓
+    w09 λ=0.7937:  full=-60.896,  tail=-59.360,  drift=2.5%  ✓
+    w10 λ=0.8850:  full=-591.987,  tail=-593.902,  drift=0.3%  ✓
+    w11 λ=0.9521:  full=-122.589,  tail=-122.650,  drift=0.0%  ✓
+    w12 λ=0.9908:  full=-4.935,  tail=-4.973,  drift=0.8%  ✓
+
+  Overall verdict : SOME WINDOWS SHOW DRIFT – check plots carefully
+
+─────────────────────────────────────────────────────────────────
+  FINAL BINDING FREE ENERGY  (10 ns, after 2 ns eq. skip)
+  ΔF = -2561.3178 ± 0.1916 kcal/mol
+─────────────────────────────────────────────────────────────────
