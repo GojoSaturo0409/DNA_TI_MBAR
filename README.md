@@ -18,9 +18,9 @@ integration (TI) / Multistate Bennett Acceptance Ratio (MBAR) results reported i
 ```
 DNA_TI_MBAR/
 ├── structures/
-│   ├── ds_non_solvated.pdb        Full DNA duplex system (non-solvated, productively bound state,
+│   ├── ds_non_solvated.pdb        Full Rad4–DNA system (non-solvated, docked state,
 │   │                               6-4PP lesion + partner bases, protein chain X)
-│   └── pb_non_solvated.pdb        Partner-base system (non-solvated)
+│   └── pb_non_solvated.pdb        Full Rad4–DNA system (non-solvated, productively bound state)
 ├── amber_inputs/
 │   ├── min.in                     Energy minimization (λ = 0.5 hybrid state, example: BHD2 leg)
 │   ├── heat.in                    Heating, 0 → 300 K over 0.6 ns (NVT)
