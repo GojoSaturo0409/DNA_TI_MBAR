@@ -2,7 +2,8 @@
 
 Data and code availability repository for:
 
-**Thermodynamic Integration and MBAR Analysis of Rad4–DNA Recognition via Free Energy Decomposition**
+**Energetic and Dynamical Basis of Rad4
+Recognition of UV-Induced DNA Damage**
 Rahul Singal and Marimuthu Krishnan
 Center for Computational Natural Sciences and Bioinformatics, IIIT-Hyderabad
 
