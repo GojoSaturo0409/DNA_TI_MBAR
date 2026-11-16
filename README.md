@@ -13,6 +13,12 @@ integration (TI) / Multistate Bennett Acceptance Ratio (MBAR) results reported i
 
 
 
+
+> **Revision (November 2026).** The free energies of the revised manuscript come from new two-stage TI/MBAR
+> calculations (63 lambda windows x 10 ns, 16 legs, 6-4PP and CPD) in [`revision_2026/`](revision_2026/README.md):
+> topologies, equilibrated seeds, inputs, job and analysis scripts, all dU/dlambda and single-point energy data,
+> per-leg results and Rocklin corrections. The original 12-window data below are kept for reference only.
+
 ## Repository structure
 
 ```

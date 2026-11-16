@@ -1,0 +1,9 @@
+single point at clambda=0.50 scalpha=0.2
+&cntrl
+  imin=1, maxcyc=1, ncyc=1, ntmin=2, ntx=1, irest=0,
+  ntb=1, cut=10.0, ntpr=1, ntwx=0, ntwr=0, ntc=1, ntf=1,
+  icfe=1, clambda=@LAM@, ifsc=1,
+  timask1='@MASK@', scmask1='@MASK@', timask2='', scmask2='',
+  gti_lam_sch=1, gti_ele_sc=0, gti_vdw_sc=1, gti_cut_sc=2, gti_add_sc=1,
+  scalpha=0.2, scbeta=0.0, logdvdl=0, ifmbar=0,
+/

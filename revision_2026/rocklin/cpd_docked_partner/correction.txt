@@ -1,0 +1,7 @@
+The total correction energy is: 162.68 kJ/mol or 38.88 kCal/mol
+= ΔΔG_ANA(L): 23.75 kJ/mol + ΔΔG_DSC(L): 138.93 kJ/mol
+ΔΔG_ANA(L) = ΔΔG_NET(L) + ΔΔG_USV(L) + ΔΔG_RIP(L) + ΔΔG_EMP(L)
+ΔΔG_NET(L) = 1692.63 kJ/mol
+ΔΔG_NET(L) + ΔΔG_USV(L) = 17.45 kJ/mol
+ΔΔG_RIP(L) = 6.30 kJ/mol
+ΔΔG_EMP(L) = -0.01 kJ/mol

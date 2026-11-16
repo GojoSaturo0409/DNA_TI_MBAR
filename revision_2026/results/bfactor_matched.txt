@@ -1,0 +1,9 @@
+# 2026-11-16 R1.8: 6CFI B-factors (heavy atoms, resolved only), residue sets = simulated motifs (model->native +118 for protein)
+# method check: old ranges reproduce manuscript Table 2 exactly (BHD2 510-532: 137.46/133 atoms; BHD3 590-614: 113.81/186)
+motif,native_selection,B_A2,atoms,missing_residues
+lesion,chain Y 9 (T64),214.05,40,
+BHD2_tip,chain A 510-524,140.68,67,518-524 unresolved (REMARK 465)
+BHD3_tip,chain A 593-603,129.83,86,
+partner_3prime_585,chain W 17,125.62,21,
+partner_5prime_584,chain W 16,110.41,21,
+# 6CFI also contains chain X 256-308 (Rad23 fragment)
