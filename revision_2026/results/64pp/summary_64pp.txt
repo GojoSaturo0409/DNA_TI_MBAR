@@ -1,0 +1,48 @@
+===== 64pp: per leg (kcal/mol; errors = paired block bootstrap, 200 x 10 blocks) =====
+           leg    E_TI  E_MBAR  E_err  E_TIminusMBAR  E_diff_err  E_overlap_min  V_TI_GL  V_TI_spline  V_MBAR  V_err  V_TIspl_minus_MBAR  V_diff_err  V_overlap_min
+     pb_lesion 365.175 365.149  0.213          0.025       0.099          0.166    1.809        2.666   2.746  0.268              -0.080       0.247          0.097
+    pb_partner 319.611 319.668  0.265         -0.057       0.099          0.164   24.868       25.752  25.552  0.429               0.199       0.304          0.099
+       pb_bhd2 261.397 261.446  0.513         -0.049       0.150          0.031    0.658        0.693   0.047  0.480               0.646       0.358          0.099
+       pb_bhd3 191.123 190.897  0.469          0.226       0.136          0.156   24.242       26.349  26.799  0.491              -0.451       0.340          0.105
+ docked_lesion 358.380 358.369  0.189          0.011       0.093          0.167   13.180       12.706  12.327  0.322               0.379       0.282          0.096
+docked_partner 321.076 320.879  0.225          0.198       0.100          0.169   15.118       14.826  14.411  0.324               0.415       0.278          0.097
+   docked_bhd2 271.024 271.213  0.809         -0.189       0.220          0.063  -24.030      -14.276 -14.823  0.525               0.547       0.389          0.090
+   docked_bhd3 196.094 195.984  0.498          0.110       0.110          0.158    1.643        6.733   6.540  0.437               0.193       0.376          0.101
+
+----- totals, Rocklin, convergence (MBAR E+V) -----
+           leg  dG_dec  dG_dec_err  dG_dec_TI  dG_dec_TI_err  rocklin  dG_corr   half1   half2  z_half  drift_windows
+     pb_lesion 367.896       0.355    367.841          0.270    38.66  329.236 367.957 367.885  -0.102             13
+    pb_partner 345.221       0.495    345.363          0.422    38.57  306.651 346.120 344.233  -1.907             11
+       pb_bhd2 261.493       0.737    262.090          0.697    19.23  242.263 262.183 260.845  -0.908             12
+       pb_bhd3 217.696       0.693    217.471          0.581   -39.19  256.886 218.464 217.212  -0.903             17
+ docked_lesion 370.696       0.363    371.086          0.275    38.52  332.176 370.518 370.852   0.459             14
+docked_partner 335.290       0.377    335.903          0.296    38.56  296.730 335.560 335.136  -0.563             17
+   docked_bhd2 256.390       0.964    256.748          0.901    19.20  237.190 254.497 257.902   1.767             24
+   docked_bhd3 202.524       0.661    202.827          0.580   -38.52  241.044 200.555 204.604   3.061             16
+
+forward (25/50/75/100% of 4 ns) | reverse:
+  pb_lesion         367.00   367.96   367.91   367.90  |   367.93   367.88   368.21   367.90
+  pb_partner        345.81   346.12   346.15   345.22  |   342.42   344.23   344.92   345.22
+  pb_bhd2           260.08   262.18   261.51   261.49  |   261.35   260.85   262.04   261.49
+  pb_bhd3           218.23   218.46   218.22   217.70  |   216.40   217.21   217.69   217.70
+  docked_lesion     370.33   370.52   370.91   370.70  |   370.02   370.85   370.82   370.70
+  docked_partner    335.94   335.56   335.66   335.29  |   334.25   335.14   335.14   335.29
+  docked_bhd2       253.45   254.50   255.20   256.39  |   259.70   257.90   256.91   256.39
+  docked_bhd3       198.89   200.56   201.85   202.52  |   204.69   204.60   203.82   202.52
+
+checks:
+  pb_lesion       E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=P
+  pb_partner      E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=F
+  pb_bhd2         E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=P
+  pb_bhd3         E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=F
+  docked_lesion   E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=F
+  docked_partner  E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=F
+  docked_bhd2     E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=F
+  docked_bhd3     E_linear=P E_TI_vs_MBAR_boot=P E_overlap=P V_TIspline_vs_MBAR_boot=P V_overlap=P V_region_old_vs_dense=P
+
+===== 64pp: ddG(m) = dG_dec,corr(pb) - dG_dec,corr(docked)  [>0: motif interacts more favourably in pb]  c(m) = -ddG =====
+  motif  dG_corr_pb  dG_corr_docked    ddG  ddG_err  ddG_TI  ddG_TI_err  rocklin_diff ddG_rounded  contribution_c   c_rounded
+ lesion     329.236         332.176 -2.940    0.508  -3.385       0.385          0.14  -2.9 ± 0.5           2.940   2.9 ± 0.5
+partner     306.651         296.730  9.921    0.622   9.450       0.515          0.01   9.9 ± 0.6          -9.921  -9.9 ± 0.6
+   bhd2     242.263         237.190  5.073    1.213   5.311       1.139          0.03   5.1 ± 1.2          -5.073  -5.1 ± 1.2
+   bhd3     256.886         241.044 15.842    0.958  15.314       0.821         -0.67  15.8 ± 1.0         -15.842 -15.8 ± 1.0

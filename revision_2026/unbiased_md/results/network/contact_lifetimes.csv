@@ -1,0 +1,9 @@
+system,hairpin,mean_lifetime_ns,lifetime_sem,n_contacts,persistence_10ns
+64pp_pb,BHD2,2.343,0.234,15.5,0.652
+64pp_pb,BHD3,5.515,0.47,29.25,0.904
+cpd_pb,BHD2,3.818,0.599,15.75,0.722
+cpd_pb,BHD3,6.957,0.486,25.0,0.914
+64pp_docked,BHD2,4.457,0.515,9.5,0.874
+64pp_docked,BHD3,3.008,0.448,14.25,0.744
+cpd_docked,BHD2,3.191,0.36,15.75,0.717
+cpd_docked,BHD3,2.878,0.134,17.0,0.588

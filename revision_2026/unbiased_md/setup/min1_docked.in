@@ -1,0 +1,5 @@
+Relax CPD lesion in frozen environment (GB)
+&cntrl
+ imin=1, maxcyc=6000, ncyc=3000, ntb=0, igb=5, saltcon=0.15, cut=999.0,
+ ntr=1, restraint_wt=500.0, restraintmask='!:MOL', ntpr=500,
+/

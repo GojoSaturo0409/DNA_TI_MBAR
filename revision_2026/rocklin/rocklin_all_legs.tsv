@@ -1,0 +1,17 @@
+system	leg	total_kcal	NET+USV	RIP	EMP	DSC
+64pp	docked_bhd2	19.20	2.13	0.43	-0.00	16.63
+64pp	docked_bhd3	-38.52	-4.55	-0.73	0.00	-33.25
+64pp	docked_lesion	38.52	4.17	1.15	-0.00	33.20
+64pp	docked_partner	38.56	4.17	1.25	-0.00	33.14
+64pp	pb_bhd2	19.23	2.13	0.50	-0.00	16.60
+64pp	pb_bhd3	-39.19	-4.55	-1.39	0.02	-33.27
+64pp	pb_lesion	38.66	4.17	1.28	-0.01	33.21
+64pp	pb_partner	38.57	4.17	1.23	-0.01	33.18
+cpd	docked_bhd2	19.05	2.13	0.29	-0.00	16.63
+cpd	docked_bhd3	-38.98	-4.55	-1.25	0.00	-33.19
+cpd	docked_lesion	38.55	4.17	1.16	-0.00	33.22
+cpd	docked_partner	38.88	4.17	1.51	-0.00	33.21
+cpd	pb_bhd2	19.24	2.13	0.50	-0.00	16.61
+cpd	pb_bhd3	-38.78	-4.55	-1.05	0.01	-33.19
+cpd	pb_lesion	38.46	4.17	1.15	-0.01	33.15
+cpd	pb_partner	39.15	4.17	1.82	-0.01	33.18

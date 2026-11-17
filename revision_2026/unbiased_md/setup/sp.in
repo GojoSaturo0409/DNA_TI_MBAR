@@ -1,0 +1,4 @@
+single point
+&cntrl
+ imin=1, maxcyc=0, ntb=1, cut=10.0, ntpr=1,
+/

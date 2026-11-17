@@ -1,0 +1,12 @@
+6CFI.pdb
+  lesion 602                     214.1  (40 atoms)
+  BHD2 tip (Rad4 510-524)        140.7  (67 atoms)
+  BHD3 tip (Rad4 593-603)        129.8  (86 atoms)
+  5' partner 584 (W16)           110.4  (21 atoms)
+  3' partner 585 (W17)           125.6  (21 atoms)
+2QSG.pdb
+  lesion 602                     not resolved
+  BHD2 tip (Rad4 510-524)         71.6  (67 atoms)
+  BHD3 tip (Rad4 593-603)         73.2  (86 atoms)
+  5' partner 584 (W16)            76.7  (20 atoms)
+  3' partner 585 (W17)            72.9  (20 atoms)

@@ -1,0 +1,13 @@
+source leaprc.protein.ff14SB
+source leaprc.DNA.bsc1
+source leaprc.water.tip3p
+loadAmberParams frcmod.ions1lm_126_tip3p
+loadAmberParams frcmod.ionsjc_tip3p
+loadAmberParams frcmod.ions234lm_126_tip3p
+loadAmberPrep /media/rahul/EXTERNAL_USB/binding_affinity/TI/cpd.prepi
+loadAmberParams /media/rahul/EXTERNAL_USB/binding_affinity/TI/cpd.frcmod
+x = loadPdb pb_t64map.pdb
+set x box { 126.827078 98.440806 106.446678 }
+charge x
+saveAmberParm x cpd_pb.prmtop cpd_pb.leap.inpcrd
+quit
