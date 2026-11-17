@@ -1,0 +1,5 @@
+Lesion relaxation from Jakhar geometry (GB, environment restrained)
+&cntrl
+ imin=1, maxcyc=3000, ncyc=1500, ntb=0, igb=5, saltcon=0.15, cut=999.0,
+ ntr=1, restraint_wt=500.0, restraintmask='!:MOL', ntpr=250,
+/

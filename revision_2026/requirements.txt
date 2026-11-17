@@ -1,0 +1,10 @@
+# Python environment used for all analyses and figures (Python 3.12.2)
+numpy==1.26.4
+scipy==1.17.1
+pandas==3.0.1
+matplotlib==3.10.8
+MDAnalysis==2.10.0
+pymbar==4.2.0
+scikit-learn==1.8.0
+networkx==3.6.1
+# external programs: AMBER 24 / AmberTools (pmemd.cuda, tleap, cpptraj), APBS 3.x and rocklinc (finite-size correction)
