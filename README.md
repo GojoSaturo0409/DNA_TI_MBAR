@@ -53,3 +53,7 @@ and `dvdl_summary.csv`/`nb_summary.csv` where applicable — the CSV data needed
 the TI/MBAR free-energy and convergence analysis.
 
 
+
+## License
+
+Released under the MIT License (see `LICENSE`).
